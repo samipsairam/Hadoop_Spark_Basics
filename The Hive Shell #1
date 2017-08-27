@@ -1,0 +1,22 @@
+/*
+  -Storage => HDFS, S3, BLOB STORAGE etc.
+  -Processing => MapReduce, Spark, Tez etc.
+  -MetaStore =>
+  Basic commands in Hive, commands in hive is case insensitive and similar is similar to MySQL.
+  The database stores its files in a directory called metastore_db (Embedded metastore / Local Metastore / Remote Metastore)
+*/
+// Starting hive from terminal
+> hive
+> dfs -ls (Used to execute hadoop commands from hive)
+
+// Loading Data
+> LAOD DATA LOCAL INPATH "data_loc" OVERWRITE INTO TABLE data_loc;
+> LOAD DATA INPATH "dir_path/data" OVERWRITE INTO TABLE data;
+
+
+// Basic hive commands
+  SHOW TABLES;
+  CREATE DATABASE [IF NOT EXISTS] spdb1;
+  CREATE [EXTERNAL] TABLE table_name(variable DataType);
+  SHOW TABLES;
+  ALTER TABLE OLD_NAME TO new_name;
